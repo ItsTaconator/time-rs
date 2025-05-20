@@ -9,6 +9,6 @@ pub struct Arguments {
     #[arg(long, short, default_value_t = 1)]
     pub times: usize,
     /// Command to run
-    #[arg(index = 0, trailing_var_arg = true)]
+    #[arg(index = 1, trailing_var_arg = true)]
     pub command: Vec<String>,
 }
