@@ -1,13 +1,19 @@
 # time-rs
 Simple CLI program for timing how long it takes a command to run `x` amount of times
 
+![timers screenshot](https://taconator.com/static/img/projects/timers.avif)
+
+## Arguments
+- `-o, --stdout` - Prints the result of each command to the terminal
+- `-t, --times <TIMES>` - How many times the command should be ran
+- `-h, --help` - Prints help
+
 ## Usage
-`timers <command>` - *Runs `<command>` once*
+### Timing execution of command being ran once
+`timers <command>`
 
-By default, this only runs the command once. The `-t,--times` parameter allows you to specify how many times you would like for it to be ran:
+### Timing execution of command ran multiple times
+`timers -t 1000 <command>`
 
-`timers -t 1000 <command>` - *Runs `<command>` 1000 times*
-
-Additionally, `<command>` does not write to `stdout` by default. To enable `<command>` to write to `stdout`, you can use the `-o,--stdout` flag:
-
-`timers -t 1000 -o <command>` - *Runs `<command>` 1000 times, and also writes its output to `stdout`*
+### Printing output of commands to stdout
+`timers -t 1000 -o <command>`
